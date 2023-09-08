@@ -863,6 +863,38 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
                      }
                    })
                    break
+			case prefix+'yts':
+			case prefix+'ytsearch':
+				if (isGame(sender, isOwner, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+				if (args.length < 1) return reply(`Kirim perintah ${command} query \n\nContoh :\n${command} dj tiktok full bass `)
+				reply(mess.wait)
+				const yts = require("yt-search")
+				let seyts = await yts(text)
+				var ytsnya = `*Hasil Pencarian Youtube Dengan Kata Kunci* : \n_${q}_\n\n`
+				let no = 1
+				for (let i of seyts.all) {
+					ytsnya+= `⭔ No : ${no++}\n⭔ Type : ${i.type}\n⭔ Video ID : ${i.videoId}\n⭔ Title : ${i.title}\n⭔ Views : ${i.views}\n⭔ Duration : ${i.timestamp}\n⭔ Upload At : ${i.ago}\n⭔ Author : ${i.author.name}\n⭔ Url : ${i.url}\n\n────────────────────────\n\n`
+				}
+				conn.sendMessage(from, { image: { url: search.all[0].thumbnail },  caption: ytsnya }, { quoted: msg })
+				limitAdd(sender, limit)
+				break
+			case prefix+'googleimage':
+			case prefix+'googleimg':
+			case prefix+'gimage':
+			case prefix+'gimg':
+				if (isGame(sender, isOwner, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
+				if (args.length < 1) return reply(`Kirim perintah ${command} query \n\nContoh :\n${command} bakso malang `)
+				reply(mess.wait)
+				let gis = require('g-i-s')
+				var gii = await gis(q)
+				let gimg = gii[Math.floor(Math.random() * gii.length)].url
+				let gimcap = `
+     *「 GOOGLE IMAGE SEARCH 」*
+ *Query* : ${q}
+ *Media Url* : ${gimg}`
+				conn.sendMessage(from, { image: { url: gimg }, caption: gimcap }, { quoted: msg })
+				limitAdd(sender, limit)
+				break
 			// Game Menu
 			case prefix+'tebaklagu': case prefix+'tl':
                    if (isGame(sender, isOwner, gcount, glimit)) return reply(`Limit game kamu sudah habis`)
