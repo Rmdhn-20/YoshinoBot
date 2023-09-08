@@ -74,6 +74,8 @@ ${prefix}waifu
   
 *Search Menu*
 ${prefix}pinterest
+${prefix}ytsearch
+${prefix}googleimage
 
 *Game Menu*
 ${prefix}tebaklagu
