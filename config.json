@@ -1,26 +1,26 @@
 {
-  "ownerNumber": "0@s.whatsapp.net",
-  "ownerName": "rc",
-  "botName": "Yoshino Bot",
-  "packname": "follow",
-  "author": "@riycoders",
+  "ownerNumber": "6289519009370@s.whatsapp.net",
+  "ownerName": "Ekuzika",
+  "botName": "Ekuzika - Bot",
+  "packname": "Ekuzika - MD",
+  "author": "by @ekuzikaa_18",
   "pathimg": "./media/yoshino.jpg",
   "apikey": {
     "caliph": "caliphkey"
   },
   "hmm": {
-    "yt": "https://youtube.com/@riycoders",
-    "ig": "https://instagram.com/riycoders",
+    "yt": "https://youtube.com/",
+    "ig": "https://instagram.com/ekuzikaa_18",
     "linkmenu": "https://chat.whatsapp.com/KShSydBXuPBIx0eeWgl7gY"
   },
   "donasi": {
-	"dana": "081575886399",
-	"gopay": "081575886399"
+	"dana": "08889616144",
+	"gopay": "08889616144"
   },
   "gamewaktu": 90,
   "limitCount": 25,
   "gcount": {
-	"prem": 35,
-	"user": 15
+	"prem": 15,
+	"user": 3
   }
 }
